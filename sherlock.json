@@ -1,0 +1,53 @@
+{
+	"folders": [
+		"jobs",
+		"commands",
+		"visualizations"
+	],
+	"environment": {
+		"prod": {
+			"saas": {
+				"servers": [
+					"prod-saas-1",
+					"prod-saas-2",
+					"prod-saas-3",
+					"prod-saas-4"
+				],
+				"acessLog": "/var/log/nginx/access-saas.log*",
+				"applog": "/walmart/log/ws-search-service/search.log"
+			},
+			"suggest": {
+				"servers": [
+					"prod-suggest-1",
+					"prod-suggest-2",
+					"prod-suggest-3",
+					"prod-suggest-4"
+				],
+				"acessLog": "/var/log/nginx/access-suggest.log*",
+				"applog": "/walmart/log/ws-search-suggest/search.log"
+			}
+		},
+		"qa": {
+			"saas": {
+				"servers": [
+					"qa-saas-1",
+					"qa-saas-2",
+					"qa-saas-3",
+					"qa-saas-4"
+				],
+				"acessLog": "/var/log/nginx/access-saas.log*",
+				"applog": "/walmart/log/ws-search-service/search.log"
+			},
+			"suggest": {
+				"servers": [
+					"qa-suggest-1",
+					"qa-suggest-2",
+					"qa-suggest-3",
+					"qa-suggest-4"
+				],
+				"acessLog": "/var/log/nginx/access-suggest.log*",
+				"applog": "/walmart/log/ws-search-suggest/search.log"
+			}
+		}
+	}
+}

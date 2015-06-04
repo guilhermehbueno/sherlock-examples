@@ -1,0 +1,26 @@
+investigation("Uname in vagrant VM", function(sherlock){
+  investigate("Uname", function(context, done){
+    ask([], function(answers){
+      answers.servers=['127.0.0.1'];
+      answers.sshPort=2222;
+      answers.report = {
+        name: 'Uname',
+        commands:[
+          {name:'Uname', command: 'uname -a'},
+          {name:'Hello', command: 'echo "Hello Sherlock"'}
+        ]
+      }
+      check(answers, function(response){
+        conclusion(response, function(){
+          done();
+        });
+      });
+    }, {});
+  });
+
+  conclude(function(conclusions){
+      conclusions.forEach(function(conclusion){
+        sherlock.visualizations.multiCommandTableVisualization(conclusion);
+      });
+  });
+});

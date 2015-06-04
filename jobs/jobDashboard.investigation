@@ -1,0 +1,21 @@
+var blessed = require('blessed');
+var contrib = require('blessed-contrib');
+
+investigation("Job Dashboard", function(sherlock){
+  investigate("Render Dashboard", function(context, done){
+    done();
+  });
+
+  conclude(function(conclusions){
+    //sherlock.visualizations.dashboard();
+
+    var screen = blessed.screen();
+    var grid = new contrib.grid({rows: 2, cols: 2})
+
+    // grid.set(0, 0, 1, 1, blessed.box, {content: 'Visualizations:'});
+    // grid.set(1, 0, 1, 1, blessed.box, {content: 'Commands:'});
+
+    grid.applyLayout(screen);
+    screen.render();
+  });
+});
