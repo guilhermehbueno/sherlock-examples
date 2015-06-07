@@ -4,49 +4,66 @@
 		"commands",
 		"visualizations"
 	],
+	"commands":{
+		"appA":[
+			{
+				"name":"Queries per second",
+				"file":"commands/queries_per_second.js",
+				"questions":["informTheEnvironment", "selectServers", "startDate", "startTime", "endDate", "endTime", "resultSize"]
+			}
+		],
+		"appB":[
+			{
+				"name":"Queries per second",
+				"file":"commands/queries_per_second.js",
+				"questions":["informTheEnvironment", "selectServers", "startDate", "startTime", "endDate", "endTime", "resultSize"]
+			}
+		],
+		"appC":[]
+	},
 	"environment": {
 		"prod": {
-			"saas": {
+			"appA": {
 				"servers": [
-					"prod-saas-1",
-					"prod-saas-2",
-					"prod-saas-3",
-					"prod-saas-4"
+					"prod-appA-1",
+					"prod-appA-2",
+					"prod-appA-3",
+					"prod-appA-4"
 				],
-				"acessLog": "/var/log/nginx/access-saas.log*",
+				"acessLog": "/var/log/nginx/access-appA.log*",
 				"applog": "/walmart/log/ws-search-service/search.log"
 			},
-			"suggest": {
+			"appB": {
 				"servers": [
-					"prod-suggest-1",
-					"prod-suggest-2",
-					"prod-suggest-3",
-					"prod-suggest-4"
+					"prod-appB-1",
+					"prod-appB-2",
+					"prod-appB-3",
+					"prod-appB-4"
 				],
-				"acessLog": "/var/log/nginx/access-suggest.log*",
-				"applog": "/walmart/log/ws-search-suggest/search.log"
+				"acessLog": "/var/log/nginx/access-appB.log*",
+				"applog": "/walmart/log/ws-search-appB/search.log"
 			}
 		},
 		"qa": {
-			"saas": {
+			"appA": {
 				"servers": [
-					"qa-saas-1",
-					"qa-saas-2",
-					"qa-saas-3",
-					"qa-saas-4"
+					"qa-appA-1",
+					"qa-appA-2",
+					"qa-appA-3",
+					"qa-appA-4"
 				],
-				"acessLog": "/var/log/nginx/access-saas.log*",
+				"acessLog": "/var/log/nginx/access-appA.log*",
 				"applog": "/walmart/log/ws-search-service/search.log"
 			},
-			"suggest": {
+			"appB": {
 				"servers": [
-					"qa-suggest-1",
-					"qa-suggest-2",
-					"qa-suggest-3",
-					"qa-suggest-4"
+					"qa-appB-1",
+					"qa-appB-2",
+					"qa-appB-3",
+					"qa-appB-4"
 				],
-				"acessLog": "/var/log/nginx/access-suggest.log*",
-				"applog": "/walmart/log/ws-search-suggest/search.log"
+				"acessLog": "/var/log/nginx/access-appB.log*",
+				"applog": "/walmart/log/ws-search-appB/search.log"
 			}
 		}
 	}

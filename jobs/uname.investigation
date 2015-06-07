@@ -10,6 +10,7 @@ investigation("Uname in vagrant VM", function(sherlock){
           {name:'Hello', command: 'echo "Hello Sherlock"'}
         ]
       }
+      console.log(answers);
       check(answers, function(response){
         conclusion(response, function(){
           done();
