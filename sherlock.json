@@ -10,6 +10,12 @@
 				"name":"Queries per second",
 				"file":"commands/queries_per_second.js",
 				"questions":["informTheEnvironment", "selectServers", "startDate", "startTime", "endDate", "endTime", "resultSize"]
+			},
+			{
+				"name": "Status code from NGinX",
+				"file": "commands/status_code.js",
+				"params": {"statusCodePosition": "$10"},
+				"questions": ["informTheEnvironment", "selectServers", "startDate", "startTime", "endDate", "endTime"]
 			}
 		],
 		"appB":[
@@ -19,7 +25,13 @@
 				"questions":["informTheEnvironment", "selectServers", "startDate", "startTime", "endDate", "endTime", "resultSize"]
 			}
 		],
-		"appC":[]
+		"appC":[
+			{
+				"name":"Queries per second",
+				"file":"commands/queries_per_second.js",
+				"questions":["informTheEnvironment", "selectServers", "startDate", "startTime", "endDate", "endTime", "resultSize"]
+			}
+		]
 	},
 	"environment": {
 		"prod": {
