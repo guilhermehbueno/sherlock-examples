@@ -1,0 +1,23 @@
+{
+  "name": "sherlock-examples",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "winston": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/guilhermehbueno/sherlock-examples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guilhermehbueno/sherlock-examples/issues"
+  },
+  "homepage": "https://github.com/guilhermehbueno/sherlock-examples"
+}
