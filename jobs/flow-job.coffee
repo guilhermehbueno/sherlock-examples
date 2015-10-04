@@ -5,10 +5,7 @@ investigation 'job with execution flow', (sherlock) ->
     ask questions, (answers) ->
         context = new sherlock.executions.Context
         context.ssh commands:[
-            {name: 'Create', command: "touch #{answers.filename} | echo 'Success, file \"#{answers.filename}\" was created'"},
-            {name: 'Uname', command: "uname -a"}
-            {name: 'pwd', command:'pwd'},
-            {name: 'List', command:'ls'}
+            {name: 'Create', command: "touch #{answers.filename} | echo 'Success, file \"#{answers.filename}\" was created'"}
         ]
 
         ssh   = new sherlock.executions.SSH ['127.0.0.1'], 2222
@@ -20,10 +17,5 @@ investigation 'job with execution flow', (sherlock) ->
             done()
 
   conclude (conclusions) ->
-    results=[]
-    results.push  conclusion: conclusion.conclusion[0] for conclusion in conclusions
+    console.log conclusion.conclusion[0] for conclusion in conclusions
 
-    try
-        sherlock.visualizations.multiCommandTableVisualization(results[0])
-     catch error
-        console.log(error)

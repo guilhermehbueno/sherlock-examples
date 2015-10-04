@@ -3,5 +3,5 @@ investigation 'Testing blessed contrib', (sherlock) ->
     console.log 'Render'
     done()
   conclude (conclusions) ->
-    # sherlock.visualizations.dashboard()
+    sherlock.visualizations.dashboard()
     console.log 'Finish'
